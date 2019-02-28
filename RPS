@@ -1,0 +1,86 @@
+/****************************************************************************
+ * My assingment 2b
+ * Created by: Gavin Zhou 
+ * Created on: Feb 2019
+ *
+ ****************************************************************************/
+
+import java.util.Scanner;
+import java.util.Random;
+
+ class RPS{
+    public static void main(String[] args) {
+// all symbol I had
+    String choice;
+    String choice1;
+    int num = 0;
+    Random r = new Random();
+    num = r.nextInt(3);
+// teach user how to play rock, paper, Scissors
+    System.out.println("Choose: Rock, Paper, Scissors.");
+    Scanner userChoice = new Scanner(System.in);
+    choice1 = userChoice.next();
+    choice = choice1.toLowerCase();
+
+    switch (num) {
+        // IF user input rock
+    case 0:
+        String num1 = "rock";
+        System.out.println("System chose Rock");
+        if(choice.matches(num1)){
+           System.out.println("Tie!");
+
+           } 
+        else if (choice.matches("paper")){
+            System.out.println("you win!");
+        }
+        else if (choice.matches("scissors")){
+            System.out.println("you lose!");
+        }
+        else {
+            System.out.println();
+            System.out.println("Sorry: please choose Rock, paper or scissors");
+        }
+    break;
+    // IF user input paper
+    case 1:
+            String num2 = "paper";
+        System.out.println("System chose paper");
+        if(choice.matches(num2)){
+           System.out.println("Tie!");
+
+           } 
+        else if (choice.matches("rock")){
+            System.out.println("you lose!");
+        }
+        else if (choice.matches("scissors")){
+            System.out.println("you win!");
+        }
+        else {
+            System.out.println();
+            System.out.println("Sorry: please choose Rock, paper or scissors");
+        }
+    break;
+    // IF user input scissors
+    case 2:
+            String num3 = "scissors";
+        System.out.println("System chose scissors");
+        if(choice.matches(num3)){
+           System.out.println("Tie!");
+
+           } 
+        else if (choice.matches("rock")){
+            System.out.println("you win!");
+        }
+        else if (choice.matches("paper")){
+            System.out.println("you lose!");
+        }
+        else {
+            System.out.println();
+            System.out.println("Sorry: please choose Rock, paper or scissors");
+        }
+    break;
+    }
+
+}
+}
